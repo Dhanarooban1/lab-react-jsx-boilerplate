@@ -3,7 +3,7 @@ import "./App.css"
 import elephant from "./images/elephant.jpeg";
 
 export default class AppClass extends Component{
-  
+
   imageData = ()=>{
     let data = [
       {
@@ -25,6 +25,15 @@ export default class AppClass extends Component{
     ]
     return data;
   }
-
-  // code here
+render(){
+  const data = this.imageData()
+  // console.log(data)
+  return(
+    <div id="grid">
+      {
+      data.map((el) => {
+      return <img src={el.img}/>})
+      }
+    </div>)
+}
 }

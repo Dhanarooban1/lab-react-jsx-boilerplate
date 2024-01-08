@@ -1,6 +1,6 @@
 import './App.css';
 import elephant from "./images/elephant.jpeg";
-
+import  AppClass from "./AppClass.jsx";
 const imageData = ()=>{
   let data = [
     {
@@ -24,7 +24,26 @@ const imageData = ()=>{
 }
 
 function App() {
-  // code here
+  const data = imageData();
+  console.log(data);
+
+  return(
+    <>
+   
+  <div id="grid">
+    {
+    data.map((el) => {
+    return <img src={el.img}/>})
+
+    }
+
+  </div>
+
+   <AppClass/>
+
+</>
+  )
+ 
 }
 
 export default App;

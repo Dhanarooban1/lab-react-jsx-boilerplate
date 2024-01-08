@@ -1,1 +1,17 @@
 /* add your styles here */
+
+#grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-gap: 1%;
+
+}
+#grid img {
+    width: 100%;
+}
+
+h1{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
